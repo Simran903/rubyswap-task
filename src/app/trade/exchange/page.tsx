@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { useRouter } from "next/navigation"; // Import useRouter hook
+import { useRouter } from "next/navigation";
 
 const Trade: React.FC = () => {
   const [selectedTradeType, setSelectedTradeType] = useState("");
-  const router = useRouter(); // Initialize useRouter
+  const router = useRouter();
 
   const handleTradeTypeSelect = (item: string) => {
     setSelectedTradeType(item);

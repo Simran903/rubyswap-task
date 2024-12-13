@@ -27,14 +27,13 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-[#228b22b3] rounded-xl px-6 md:px-14 py-8 text-white shadow-lg flex flex-col md:flex-row md:justify-between items-center space-y-8 md:space-y-0">
-      {/* Image Section */}
+
       {image && (
         <div className="flex justify-center items-center flex-shrink-0 md:order-2">
           {image}
         </div>
       )}
 
-      {/* Text Section */}
       <div className="flex-1 md:order-1 text-center md:text-left">
         <h2 className="text-2xl font-semibold mb-2">{title}</h2>
         <p className="text-sm text-gray-400 mb-8">{description}</p>

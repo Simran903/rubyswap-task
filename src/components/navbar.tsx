@@ -13,13 +13,12 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="text-white px-6 py-4 flex items-center justify-between">
-      {/* Logo Section */}
+
       <div className="flex items-center">
         <FaGem className="text-[#50FA7B] h-8 w-8 mr-2" />
         <span className="text-xl font-extrabold">rubyswap</span>
       </div>
 
-      {/* Desktop Links */}
       <div className="hidden md:flex items-center space-x-6">
         <ul className="flex space-x-8 text-sm font-medium">
           <li>
@@ -59,7 +58,6 @@ const Navbar: React.FC = () => {
         <Button buttonText="Connect Wallet" className="bg-white text-black px-6 py-2 rounded-full" />
       </div>
 
-      {/* Mobile Menu Button */}
       <div className="md:hidden">
         <button onClick={toggleMenu} className="text-white focus:outline-none">
           <svg
@@ -79,7 +77,6 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-gradient-to-r from-green-900 via-black to-green-900 text-white flex flex-col space-y-4 px-6 py-4 z-50">
           <Link href="/" className="pb-1" onClick={toggleMenu}>

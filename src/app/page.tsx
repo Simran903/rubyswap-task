@@ -10,7 +10,6 @@ export default function Home() {
 
   return (
     <div className="min-h-[87vh] px-4 md:px-16 lg:px-32 py-8 md:py-16">
-      {/* Card Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
         <Card
           title="Farms & Staking"
@@ -41,7 +40,6 @@ export default function Home() {
         />
       </div>
 
-      {/* MiniCard Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pt-8">
         <MiniCard
           title="Earn"

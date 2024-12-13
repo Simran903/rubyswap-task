@@ -94,7 +94,7 @@ const SwapPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Center Panel (Exchange Page) */}
+        {/* Center Panel */}
         <div className="col-span-5">
           <div className="rounded-md p-6 lg:p-8 space-y-6 lg:space-y-8 bg-gradient-to-r from-black to-green-900">
             <div className="flex justify-between items-center">

@@ -9,8 +9,6 @@ import {
   PointElement,
   ChartOptions,
 } from "chart.js";
-
-// Import JSON data
 import data from "../constant/data.json";
 
 ChartJS.register(LineElement, CategoryScale, LinearScale, Tooltip, PointElement);

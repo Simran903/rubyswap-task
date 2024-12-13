@@ -1,7 +1,7 @@
 interface ButtonProps {
   buttonText: string;
   className: string;
-  onClick?: () => void; // Make onClick optional if not always required
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({ buttonText, className, onClick }) => {
