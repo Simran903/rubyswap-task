@@ -9,7 +9,7 @@ export default function Home() {
   };
 
   return (
-    <div className="px-4 md:px-16 lg:px-32 py-8 md:py-16">
+    <div className="min-h-[87vh] px-4 md:px-16 lg:px-32 py-8 md:py-16">
       {/* Card Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
         <Card

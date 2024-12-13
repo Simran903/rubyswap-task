@@ -60,7 +60,7 @@ const SwapPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-green-900 via-black to-green-900 flex justify-center my-10">
+    <div className="min-h-[78vh] bg-gradient-to-r from-green-900 via-black to-green-900 flex justify-center my-10">
       <div className="grid grid-cols-1 lg:grid-cols-11 gap-6 max-w-7xl w-full px-8 md:px-16 text-white">
         {/* Left Panel */}
         <div className="col-span-5 md:col-span-3 space-y-6">
