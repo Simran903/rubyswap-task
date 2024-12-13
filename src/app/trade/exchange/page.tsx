@@ -18,7 +18,7 @@ const Trade: React.FC = () => {
   };
 
   return (
-    <div className="min-h-[87vh] bg-gradient-to-r from-green-900 via-black to-green-900 p-16">
+    <div className="min-h-[87vh] bg-gradient-to-r from-green-900 via-black to-green-900 px-4 md:px-16 lg:px-32 py-8 md:py-16">
         <div className="w-full bg-black/50 rounded-md p-8">
           <h2 className="text-lg font-semibold">Trade</h2>
           <p className="text-sm text-gray-400 mt-2">
