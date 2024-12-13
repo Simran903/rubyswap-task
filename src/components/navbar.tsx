@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             <span className="cursor-pointer hover:text-[#50FA7B]">More ▼</span>
           </li>
         </ul>
-        <Button buttonText="Connect Wallet" className="bg-white text-black" />
+        <Button buttonText="Connect Wallet" className="bg-white text-black px-6 py-2 rounded-full" />
       </div>
 
       {/* Mobile Menu Button */}
