@@ -9,11 +9,6 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const isActive = (path: string) =>
-    pathname === path
-      ? "border-b-2 border-white"
-      : "hover:text-[#50FA7B]";
-
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
@@ -28,32 +23,32 @@ const Navbar: React.FC = () => {
       <div className="hidden md:flex items-center space-x-6">
         <ul className="flex space-x-8 text-sm font-medium">
           <li>
-            <Link href="/" className={`pb-1 ${isActive("/")}`}>
+            <Link href="/" className={`pb-1 ${("/")}`}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/trade/exchange" className={`pb-1 ${isActive("/trade")}`}>
+            <Link href="/trade/exchange" className={`pb-1 ${("/trade")}`}>
               Trade
             </Link>
           </li>
           <li>
-            <Link href="/farms" className={`pb-1 ${isActive("/farms")}`}>
+            <Link href="/farms" className={`pb-1 ${("/farms")}`}>
               Farms
             </Link>
           </li>
           <li>
-            <Link href="/pools" className={`pb-1 ${isActive("/pools")}`}>
+            <Link href="/pools" className={`pb-1 ${("/pools")}`}>
               Pools
             </Link>
           </li>
           <li>
-            <Link href="/prediction" className={`pb-1 ${isActive("/prediction")}`}>
+            <Link href="/prediction" className= "pb-1">
               Prediction
             </Link>
           </li>
           <li>
-            <Link href="/collectibles" className={`pb-1 ${isActive("/collectibles")}`}>
+            <Link href="/collectibles" className="pb-1">
               Collectibles
             </Link>
           </li>
@@ -87,32 +82,32 @@ const Navbar: React.FC = () => {
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-gradient-to-r from-green-900 via-black to-green-900 text-white flex flex-col space-y-4 px-6 py-4 z-50">
-          <Link href="/" className={`pb-1 ${isActive("/")}`} onClick={toggleMenu}>
+          <Link href="/" className="pb-1" onClick={toggleMenu}>
             Home
           </Link>
           <Link
             href="/trade/exchange"
-            className={`pb-1 ${isActive("/trade")}`}
+            className="pb-1"
             onClick={toggleMenu}
           >
             Trade
           </Link>
-          <Link href="/farms" className={`pb-1 ${isActive("/farms")}`} onClick={toggleMenu}>
+          <Link href="/farms" className="pb-1" onClick={toggleMenu}>
             Farms
           </Link>
-          <Link href="/pools" className={`pb-1 ${isActive("/pools")}`} onClick={toggleMenu}>
+          <Link href="/pools" className="pb-1" onClick={toggleMenu}>
             Pools
           </Link>
           <Link
             href="/prediction"
-            className={`pb-1 ${isActive("/prediction")}`}
+            className= "pb-1"
             onClick={toggleMenu}
           >
             Prediction
           </Link>
           <Link
             href="/collectibles"
-            className={`pb-1 ${isActive("/collectibles")}`}
+            className="pb-1"
             onClick={toggleMenu}
           >
             Collectibles
