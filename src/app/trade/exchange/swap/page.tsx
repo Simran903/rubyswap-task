@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/button";
 import React, { useState, useEffect } from "react";
-import { FiClock, FiInfo } from "react-icons/fi";
+import { FiClock, FiInfo, FiArrowRight } from "react-icons/fi";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
@@ -60,23 +60,29 @@ const SwapPage: React.FC = () => {
   };
 
   return (
-    <div className="h-screen bg-gradient-to-r from-green-900 via-black to-green-900 flex justify-center my-10">
-      <div className="grid grid-cols-1 md:grid-cols-11 gap-8 max-w-7xl w-full px-8 text-white">
+    <div className="min-h-screen bg-gradient-to-r from-green-900 via-black to-green-900 flex justify-center my-10">
+      <div className="grid grid-cols-1 lg:grid-cols-11 gap-6 max-w-7xl w-full px-8 md:px-16 text-white">
         {/* Left Panel */}
-        <div className="col-span-3 space-y-8">
-          <div className="bg-black/50 rounded-md p-8">
-            <h2 className="text-lg font-semibold">Trade</h2>
+        <div className="col-span-5 md:col-span-3 space-y-6">
+          <div className="bg-black/50 rounded-md p-6 lg:p-8">
+            <h2 className="text-lg md:text-xl font-semibold">Trade</h2>
             <p className="text-sm text-gray-400 mt-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi
               porttitor est.
             </p>
+            <a
+              href="#"
+              className="text-sm flex items-center gap-2 mt-4 hover:underline"
+            >
+              Learn More <FiArrowRight />
+            </a>
             <ul className="mt-6 space-y-6">
               {["Exchange", "Liquidity", "LP Migration", "V1 Liquidity (old)"].map((item, index) => (
                 <li key={index}>
                   <button
                     className={`w-full text-left p-3 rounded-md ${selectedTradeType === item
-                        ? "bg-gray-800 font-bold"
-                        : "hover:bg-gray-800"
+                      ? "bg-gray-800 font-bold"
+                      : "hover:bg-gray-800"
                       }`}
                     onClick={() => handleTradeTypeChange(item)}
                   >
@@ -90,7 +96,7 @@ const SwapPage: React.FC = () => {
 
         {/* Center Panel (Exchange Page) */}
         <div className="col-span-5">
-          <div className="rounded-md p-8 space-y-8 bg-gradient-to-r from-black to-green-900">
+          <div className="rounded-md p-6 lg:p-8 space-y-6 lg:space-y-8 bg-gradient-to-r from-black to-green-900">
             <div className="flex justify-between items-center">
               <h2 className="text-lg font-semibold">Exchange</h2>
               <div className="flex space-x-4">
@@ -101,20 +107,20 @@ const SwapPage: React.FC = () => {
             <p className="text-sm mt-2">Trade tokens in an instant</p>
 
             {/* Input Section */}
-            <div className="bg-stone-950 rounded-lg p-4 flex justify-between items-center">
-              <div className="space-y-8">
+            <div className="bg-stone-950 rounded-lg p-4 flex flex-col lg:flex-row justify-between items-center gap-4">
+              <div className="space-y-2 lg:space-y-8 w-full">
                 <label className="block text-sm text-gray-400">Input</label>
                 <input
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(Number(e.target.value))}
-                  className="bg-transparent text-white text-lg outline-none mt-1 w-full"
+                  className="bg-transparent text-white text-lg outline-none w-full"
                   placeholder="0.00"
                 />
               </div>
-              <div className="relative">
+              <div className="relative w-full lg:w-auto">
                 <button
-                  className="flex items-center gap-2 bg-zinc-900 px-4 py-2 rounded-full text-sm"
+                  className="flex items-center gap-2 bg-zinc-900 px-4 py-2 rounded-full text-sm w-full lg:w-auto"
                   onClick={toggleInputDropdown}
                 >
                   {inputToken}
@@ -144,20 +150,20 @@ const SwapPage: React.FC = () => {
             </div>
 
             {/* Output Section */}
-            <div className="bg-stone-950 rounded-lg p-4 flex justify-between items-center">
-              <div className="space-y-8">
+            <div className="bg-stone-950 rounded-lg p-4 flex flex-col lg:flex-row justify-between items-center gap-4">
+              <div className="space-y-2 lg:space-y-8 w-full">
                 <label className="block text-sm text-gray-400">Output (estimated)</label>
                 <input
                   type="text"
                   value={outputValue}
                   readOnly
-                  className="bg-transparent text-white text-lg outline-none mt-1 w-full"
+                  className="bg-transparent text-white text-lg outline-none w-full"
                   placeholder="0.00"
                 />
               </div>
-              <div className="relative">
+              <div className="relative w-full lg:w-auto">
                 <button
-                  className="flex items-center gap-2 bg-zinc-900 px-4 py-2 rounded-full text-sm"
+                  className="flex items-center gap-2 bg-zinc-900 px-4 py-2 rounded-full text-sm w-full lg:w-auto"
                   onClick={toggleOutputDropdown}
                 >
                   {outputToken}
@@ -188,17 +194,17 @@ const SwapPage: React.FC = () => {
         </div>
 
         {/* Right Panel */}
-        <div className="col-span-3 space-y-8">
-          <div className="bg-black/50 rounded-md p-8">
+        <div className="col-span-5 md:col-span-3 space-y-6">
+          <div className="bg-black/50 rounded-md p-6 lg:p-8">
             <h2 className="text-lg font-semibold">Select your Trade type</h2>
             <p className="text-sm text-gray-400 mt-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <div className="mt-6 space-y-4">
+            <div className="mt-6 space-y-4 w-full">
               {["Swap", "Liquidity", "Bridge"].map((type) => (
                 <label
                   key={type}
-                  className="flex items-center justify-between text-sm"
+                  className="flex items-center justify-between text-sm w-full"
                 >
                   <span>{type}</span>
                   <input
@@ -213,14 +219,14 @@ const SwapPage: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="bg-black/50 rounded-md p-8">
+          <div className="bg-black/50 rounded-md p-6 lg:p-8">
             <h2 className="text-lg font-semibold">What is Exchange?</h2>
             <p className="text-sm text-gray-400 mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi
-              porttitor est.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi porttitor est.
             </p>
           </div>
         </div>
+
       </div>
     </div>
   );

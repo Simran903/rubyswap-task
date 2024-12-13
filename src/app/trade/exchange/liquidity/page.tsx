@@ -10,7 +10,7 @@ const LiquidityPage: React.FC = () => {
   const router = useRouter();
 
   const handleTradeTypeChange = (type: string) => {
-    setSelectedTradeType(type);  // Update the selected trade type
+    setSelectedTradeType(type);
     if (type === "Swap") {
       router.push("/trade/exchange/swap");
     } else if (type === "Liquidity") {
@@ -18,18 +18,17 @@ const LiquidityPage: React.FC = () => {
     } else if (type === "Bridge") {
       router.push("/trade/exchange/bridge");
     } else if (type === "Exchange") {
-      router.push("/trade/exchange/swap"); // Redirect to Swap when Exchange is clicked
+      router.push("/trade/exchange/swap");
     }
   };
 
   return (
-    <div className="h-screen bg-gradient-to-r from-green-900 via-black to-green-900 flex justify-center my-10">
-      <div className="grid grid-cols-1 md:grid-cols-11 gap-8 max-w-7xl w-full px-8 text-white">
+    <div className="min-h-screen bg-gradient-to-r from-green-900 via-black to-green-900 flex justify-center my-10">
+      <div className="grid grid-cols-1 md:grid-cols-11 gap-8 max-w-7xl w-full px-8 md:px-16 text-white">
         {/* Left Panel */}
-        <div className="col-span-3 space-y-8">
-          <div className=" bg-black/50 rounded-md p-8">
-
-            <h2 className="text-lg font-semibold">Trade</h2>
+        <div className="col-span-1 md:col-span-3 space-y-8">
+          <div className="bg-black/50 rounded-md p-6 md:p-8">
+            <h2 className="text-lg md:text-xl font-semibold">Trade</h2>
             <p className="text-sm text-gray-400 mt-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi
               porttitor est.
@@ -61,18 +60,17 @@ const LiquidityPage: React.FC = () => {
         </div>
 
         {/* Center Panel */}
-        <div className="col-span-5">
-
-          <div className="bg-black/50 rounded-md p-8 space-y-8">
+        <div className="col-span-1 md:col-span-5 space-y-8">
+          <div className="bg-black/50 rounded-md p-6 md:p-8 space-y-8">
             <div className="flex justify-between items-center">
-              <h2 className="text-lg font-semibold">Liquidity</h2>
+              <h2 className="text-lg md:text-xl font-semibold">Liquidity</h2>
               <div className="flex space-x-4">
                 <FiInfo className="text-xl cursor-pointer" />
                 <FiClock className="text-xl cursor-pointer" />
               </div>
             </div>
             <p className="text-sm mt-2">Add liquidity to receive LP tokens</p>
-            <Button buttonText="Add Liquidity" className="bg-green-600 px-10" />
+            <Button buttonText="Add Liquidity" className="bg-green-600 px-6 md:px-10 py-2" />
             <div className="mt-8">
               <div className="flex justify-between items-center space-y-4 mb-4">
                 <p className="text-sm">Your Liquidity</p>
@@ -94,9 +92,9 @@ const LiquidityPage: React.FC = () => {
         </div>
 
         {/* Right Panel */}
-        <div className="col-span-3 space-y-8">
-          <div className="bg-black/50 rounded-md p-8">
-            <h2 className="text-lg font-semibold">Select your Trade type</h2>
+        <div className="col-span-1 md:col-span-3 space-y-8">
+          <div className="bg-black/50 rounded-md p-6 md:p-8">
+            <h2 className="text-lg md:text-xl font-semibold">Select your Trade type</h2>
             <p className="text-sm text-gray-400 mt-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -104,7 +102,7 @@ const LiquidityPage: React.FC = () => {
               {["Swap", "Liquidity", "Bridge"].map((type) => (
                 <label
                   key={type}
-                  className="flex items-center justify-between text-sm"
+                  className="flex items-center justify-between text-sm w-full"
                 >
                   <span>{type}</span>
                   <input
@@ -119,8 +117,8 @@ const LiquidityPage: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="bg-black/50 rounded-md p-8">
-            <h2 className="text-lg font-semibold">What is Liquidity?</h2>
+          <div className="bg-black/50 rounded-md p-6 md:p-8">
+            <h2 className="text-lg md:text-xl font-semibold">What is Liquidity?</h2>
             <p className="text-sm text-gray-400 mt-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi
               porttitor est.
